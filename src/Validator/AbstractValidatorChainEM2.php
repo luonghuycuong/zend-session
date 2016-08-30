@@ -48,7 +48,7 @@ abstract class AbstractValidatorChainEM2 extends EventManager
      * @param int $priority
      * @return \Zend\Stdlib\CallbackHandler
      */
-    public function attach($event, $callback = null, $priority = 1)
+    public function attach($event, callable $callback, $priority = 1)
     {
         return $this->attachValidator($event, $callback, $priority);
     }
